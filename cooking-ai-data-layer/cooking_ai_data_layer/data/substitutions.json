@@ -1,0 +1,40 @@
+{
+  "mozzarella": [
+    {"substitute": "provolone", "note": "Melts similarly with a slightly sharper, tangier flavor."},
+    {"substitute": "fontina", "note": "Very meltable and buttery; milder than mozzarella."}
+  ],
+  "basil": [
+    {"substitute": "spinach + a pinch of dried oregano", "note": "Loses the peppery aroma but keeps the green freshness."},
+    {"substitute": "arugula", "note": "Adds a peppery bite instead of basil's sweetness."}
+  ],
+  "heavy cream": [
+    {"substitute": "coconut cream", "note": "Adds richness with a mild coconut flavor; common in Indian curries."},
+    {"substitute": "evaporated milk", "note": "Lighter texture, less fat, slightly less rich."}
+  ],
+  "yogurt": [
+    {"substitute": "sour cream", "note": "Similar tang and thickness, slightly higher fat."},
+    {"substitute": "buttermilk", "note": "Thinner consistency; reduce other liquids slightly."}
+  ],
+  "fish sauce": [
+    {"substitute": "soy sauce + a squeeze of lime", "note": "Loses some funk/umami depth but keeps saltiness and brightness."}
+  ],
+  "parmesan": [
+    {"substitute": "pecorino romano", "note": "Saltier and sharper, made from sheep's milk."},
+    {"substitute": "nutritional yeast", "note": "Vegan option with a nutty, cheesy flavor, much milder."}
+  ],
+  "butter": [
+    {"substitute": "ghee", "note": "Nuttier flavor, higher smoke point, lactose-free."},
+    {"substitute": "neutral oil", "note": "Loses richness and browning flavor but works for moisture."}
+  ],
+  "chicken thighs": [
+    {"substitute": "chicken breast", "note": "Leaner and cooks faster; easier to overcook and dry out."},
+    {"substitute": "firm tofu", "note": "Vegetarian option; absorbs marinade well but won't shred."}
+  ],
+  "anchovy fillets": [
+    {"substitute": "worcestershire sauce", "note": "Contains anchovy extract; adds similar umami depth in smaller amounts."},
+    {"substitute": "capers, minced", "note": "Briny and salty, vegetarian-friendly alternative."}
+  ],
+  "all-purpose flour": [
+    {"substitute": "1:1 gluten-free baking flour", "note": "Designed to mimic structure; texture may be slightly denser."}
+  ]
+}

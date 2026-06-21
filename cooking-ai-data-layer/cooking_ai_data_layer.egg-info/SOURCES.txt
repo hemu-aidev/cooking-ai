@@ -1,0 +1,16 @@
+README.md
+pyproject.toml
+cooking_ai_data_layer/__init__.py
+cooking_ai_data_layer/config.py
+cooking_ai_data_layer/data_model_layer.py
+cooking_ai_data_layer/embedding_search.py
+cooking_ai_data_layer/local_llm_service.py
+cooking_ai_data_layer/youtube_service.py
+cooking_ai_data_layer.egg-info/PKG-INFO
+cooking_ai_data_layer.egg-info/SOURCES.txt
+cooking_ai_data_layer.egg-info/dependency_links.txt
+cooking_ai_data_layer.egg-info/requires.txt
+cooking_ai_data_layer.egg-info/top_level.txt
+cooking_ai_data_layer/data/recipes.json
+cooking_ai_data_layer/data/substitutions.json
+tests/test_integration.py

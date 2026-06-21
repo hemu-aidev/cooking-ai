@@ -1,0 +1,8 @@
+flask>=3.0.0
+flask-cors>=4.0.0
+gunicorn>=21.0.0
+python-dotenv>=1.0.0
+
+# The Data/Model Layer is a separate package — install it explicitly:
+#   pip install -e ../cooking-ai-data-layer
+# (kept out of this file since its path is environment-specific)

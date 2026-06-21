@@ -1,0 +1,151 @@
+[
+  {
+    "id": "margherita_pizza",
+    "title": "Margherita Pizza",
+    "tags": ["italian", "pizza", "vegetarian", "baking"],
+    "servings": 4,
+    "prep_time_minutes": 20,
+    "cook_time_minutes": 12,
+    "ingredients": [
+      {"name": "pizza dough", "quantity": "1", "unit": "ball (about 280g)"},
+      {"name": "San Marzano tomatoes, crushed", "quantity": "200", "unit": "g"},
+      {"name": "fresh mozzarella, torn", "quantity": "200", "unit": "g"},
+      {"name": "fresh basil leaves", "quantity": "10", "unit": "leaves"},
+      {"name": "extra virgin olive oil", "quantity": "2", "unit": "tbsp"},
+      {"name": "salt", "quantity": "1", "unit": "tsp"}
+    ],
+    "steps": [
+      "Preheat oven to 250C (480F) with a pizza stone or steel inside, for at least 45 minutes.",
+      "Stretch the dough into a 12-inch round on a floured surface.",
+      "Spread crushed tomatoes evenly, leaving a 1-inch border for the crust.",
+      "Distribute torn mozzarella over the sauce.",
+      "Slide onto the hot stone and bake 8-12 minutes until the crust is blistered and cheese is bubbling.",
+      "Remove, top with fresh basil leaves, drizzle with olive oil, and finish with a pinch of salt."
+    ]
+  },
+  {
+    "id": "butter_chicken",
+    "title": "Butter Chicken",
+    "tags": ["indian", "curry", "chicken", "dinner"],
+    "servings": 4,
+    "prep_time_minutes": 30,
+    "cook_time_minutes": 35,
+    "ingredients": [
+      {"name": "boneless chicken thighs, cubed", "quantity": "600", "unit": "g"},
+      {"name": "plain yogurt", "quantity": "150", "unit": "g"},
+      {"name": "garam masala", "quantity": "2", "unit": "tsp"},
+      {"name": "butter", "quantity": "60", "unit": "g"},
+      {"name": "tomato puree", "quantity": "400", "unit": "g"},
+      {"name": "heavy cream", "quantity": "120", "unit": "ml"},
+      {"name": "garlic, minced", "quantity": "4", "unit": "cloves"},
+      {"name": "ginger, grated", "quantity": "1", "unit": "tbsp"}
+    ],
+    "steps": [
+      "Marinate chicken in yogurt, garam masala, garlic, and ginger for at least 1 hour.",
+      "Sear marinated chicken in a hot pan until browned, then set aside.",
+      "Melt butter in the same pan, add tomato puree, and simmer 10 minutes.",
+      "Blend the sauce smooth, return to heat, and stir in cream.",
+      "Add chicken back in and simmer 15 minutes until cooked through.",
+      "Finish with a knob of butter and serve with rice or naan."
+    ]
+  },
+  {
+    "id": "pad_thai",
+    "title": "Pad Thai",
+    "tags": ["thai", "noodles", "stir-fry", "dinner"],
+    "servings": 2,
+    "prep_time_minutes": 20,
+    "cook_time_minutes": 10,
+    "ingredients": [
+      {"name": "flat rice noodles", "quantity": "200", "unit": "g"},
+      {"name": "shrimp or tofu", "quantity": "200", "unit": "g"},
+      {"name": "eggs", "quantity": "2", "unit": "large"},
+      {"name": "bean sprouts", "quantity": "100", "unit": "g"},
+      {"name": "tamarind paste", "quantity": "2", "unit": "tbsp"},
+      {"name": "fish sauce", "quantity": "2", "unit": "tbsp"},
+      {"name": "palm sugar", "quantity": "1", "unit": "tbsp"},
+      {"name": "roasted peanuts, crushed", "quantity": "30", "unit": "g"}
+    ],
+    "steps": [
+      "Soak rice noodles in warm water until pliable, about 20 minutes.",
+      "Whisk tamarind paste, fish sauce, and palm sugar into a sauce.",
+      "Stir-fry shrimp or tofu in a hot wok until just cooked, push to one side.",
+      "Scramble eggs in the cleared space, then mix everything together.",
+      "Add drained noodles and sauce, toss until noodles are coated and tender.",
+      "Add bean sprouts, toss briefly, and top with crushed peanuts."
+    ]
+  },
+  {
+    "id": "caesar_salad",
+    "title": "Caesar Salad",
+    "tags": ["salad", "vegetarian-optional", "lunch", "american"],
+    "servings": 2,
+    "prep_time_minutes": 15,
+    "cook_time_minutes": 0,
+    "ingredients": [
+      {"name": "romaine lettuce, chopped", "quantity": "1", "unit": "head"},
+      {"name": "parmesan, grated", "quantity": "50", "unit": "g"},
+      {"name": "croutons", "quantity": "60", "unit": "g"},
+      {"name": "mayonnaise", "quantity": "3", "unit": "tbsp"},
+      {"name": "anchovy fillets, minced", "quantity": "2", "unit": "fillets"},
+      {"name": "garlic, minced", "quantity": "1", "unit": "clove"},
+      {"name": "lemon juice", "quantity": "1", "unit": "tbsp"}
+    ],
+    "steps": [
+      "Whisk mayonnaise, anchovy, garlic, and lemon juice into a dressing.",
+      "Toss chopped romaine with the dressing until evenly coated.",
+      "Add croutons and half the parmesan, toss again.",
+      "Plate and top with remaining parmesan."
+    ]
+  },
+  {
+    "id": "chocolate_chip_cookies",
+    "title": "Chocolate Chip Cookies",
+    "tags": ["dessert", "baking", "vegetarian", "snack"],
+    "servings": 24,
+    "prep_time_minutes": 15,
+    "cook_time_minutes": 11,
+    "ingredients": [
+      {"name": "all-purpose flour", "quantity": "280", "unit": "g"},
+      {"name": "butter, softened", "quantity": "225", "unit": "g"},
+      {"name": "brown sugar", "quantity": "200", "unit": "g"},
+      {"name": "granulated sugar", "quantity": "100", "unit": "g"},
+      {"name": "eggs", "quantity": "2", "unit": "large"},
+      {"name": "baking soda", "quantity": "1", "unit": "tsp"},
+      {"name": "chocolate chips", "quantity": "340", "unit": "g"}
+    ],
+    "steps": [
+      "Cream butter with both sugars until light and fluffy.",
+      "Beat in eggs one at a time.",
+      "Mix in flour and baking soda until just combined.",
+      "Fold in chocolate chips.",
+      "Scoop onto a lined baking sheet and bake at 190C (375F) for 9-11 minutes.",
+      "Cool on the sheet for 5 minutes before transferring to a rack."
+    ]
+  },
+  {
+    "id": "chicken_biryani",
+    "title": "Chicken Biryani",
+    "tags": ["indian", "rice", "chicken", "dinner"],
+    "servings": 6,
+    "prep_time_minutes": 40,
+    "cook_time_minutes": 50,
+    "ingredients": [
+      {"name": "basmati rice", "quantity": "500", "unit": "g"},
+      {"name": "chicken, bone-in pieces", "quantity": "800", "unit": "g"},
+      {"name": "yogurt", "quantity": "200", "unit": "g"},
+      {"name": "fried onions", "quantity": "150", "unit": "g"},
+      {"name": "biryani masala", "quantity": "3", "unit": "tbsp"},
+      {"name": "saffron, soaked in warm milk", "quantity": "1", "unit": "pinch"},
+      {"name": "ghee", "quantity": "4", "unit": "tbsp"}
+    ],
+    "steps": [
+      "Marinate chicken in yogurt, biryani masala, and half the fried onions for 2 hours.",
+      "Parboil basmati rice until 70% cooked, then drain.",
+      "Cook marinated chicken in a heavy pot until nearly done.",
+      "Layer parboiled rice over the chicken, top with remaining fried onions and saffron milk.",
+      "Cover tightly and cook on low heat (dum) for 25-30 minutes.",
+      "Rest 10 minutes, then gently fluff and serve."
+    ]
+  }
+]

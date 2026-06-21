@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cooking-ai-data-layer"
+version = "0.1.0"
+description = "Data/Model layer for the Cooking AI product — recipe search, local pretrained-model explanations, and video lookup. No hosted LLM APIs."
+requires-python = ">=3.9"
+readme = "README.md"
+dependencies = [
+    "sentence-transformers>=2.2.0",
+    "rapidfuzz>=3.0.0",
+    "transformers>=4.40.0",
+    "torch>=2.1.0",
+    "sentencepiece>=0.1.99",
+    "google-api-python-client>=2.0.0",
+    "numpy>=1.24.0",
+    "python-dotenv>=1.0.0",
+]
+
+[project.optional-dependencies]
+# Only needed to run examples/app_layer_example.py
+app = ["flask>=3.0.0"]
+# Only needed to run tests/
+dev = ["pytest>=7.0.0"]
+
+[tool.setuptools.packages.find]
+include = ["cooking_ai_data_layer*"]
+
+[tool.setuptools.package-data]
+cooking_ai_data_layer = ["data/*.json"]

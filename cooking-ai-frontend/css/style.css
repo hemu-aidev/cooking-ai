@@ -1,0 +1,556 @@
+/* =========================================================
+   COOKING AI — design tokens
+   Palette grounded in a stainless-steel kitchen at night,
+   with the warm colors of the food itself as the only accents.
+   ========================================================= */
+:root {
+  --charcoal:     #1B1918;   /* page background — the steel kitchen */
+  --charcoal-2:   #232120;   /* raised panels on the steel */
+  --steel:        #423E3A;   /* borders / hairlines on dark */
+  --steel-soft:   #2C2A28;
+
+  --cream:        #F6F1E4;   /* ticket paper */
+  --cream-dim:    #EAE2CC;   /* secondary paper tone */
+  --ink:          #221F1C;   /* text on paper */
+  --ink-soft:     #5B564E;   /* secondary text on paper */
+
+  --tomato:       #D8432B;   /* primary accent — sauce */
+  --tomato-dim:   #A8331F;
+  --char-orange:  #E2862F;   /* secondary accent — crust char */
+  --basil:        #6E8C52;   /* fresh accent — herb */
+
+  --on-dark:      #F1EDE3;   /* body text on charcoal */
+  --on-dark-soft: #B6B0A4;
+
+  --font-display: 'Big Shoulders Display', sans-serif;
+  --font-body:    'Albert Sans', sans-serif;
+  --font-mono:    'Space Mono', monospace;
+
+  --radius: 3px;
+  --content-w: 760px;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* =========================================================
+   Reset / base
+   ========================================================= */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--charcoal);
+  color: var(--on-dark);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2 { margin: 0; }
+
+p { margin: 0 0 1em; }
+p:last-child { margin-bottom: 0; }
+
+a { color: inherit; }
+
+input, select, button {
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+:focus-visible {
+  outline: 2px solid var(--char-orange);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* =========================================================
+   Header — the steel rail
+   ========================================================= */
+.rail {
+  background: var(--charcoal-2);
+  border-bottom: 1px solid var(--steel);
+}
+.rail__inner {
+  max-width: var(--content-w);
+  margin: 0 auto;
+  padding: 18px 24px;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.wordmark {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.15rem;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  color: var(--on-dark);
+}
+.wordmark__mark {
+  color: var(--tomato);
+  font-size: 0.6rem;
+  vertical-align: middle;
+  margin-right: 2px;
+}
+.rail__tag {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--on-dark-soft);
+  font-style: italic;
+}
+
+/* =========================================================
+   Hero
+   ========================================================= */
+.hero__inner {
+  max-width: var(--content-w);
+  margin: 0 auto;
+  padding: 64px 24px 48px;
+}
+.eyebrow {
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.72rem;
+  color: var(--char-orange);
+  margin: 0 0 14px;
+}
+.hero__title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(2.6rem, 7vw, 4.2rem);
+  line-height: 0.98;
+  letter-spacing: -0.01em;
+  color: var(--on-dark);
+  text-transform: uppercase;
+}
+.hero__sub {
+  max-width: 46ch;
+  margin-top: 20px;
+  font-size: 1.05rem;
+  color: var(--on-dark-soft);
+}
+
+/* Search */
+.search {
+  display: flex;
+  gap: 10px;
+  margin-top: 32px;
+  max-width: 540px;
+  flex-wrap: wrap;
+}
+.search__input {
+  flex: 1 1 260px;
+  background: var(--charcoal-2);
+  border: 1px solid var(--steel);
+  border-radius: var(--radius);
+  color: var(--on-dark);
+  padding: 14px 16px;
+  font-size: 1rem;
+}
+.search__input::placeholder { color: var(--on-dark-soft); }
+.search__input:focus { border-color: var(--char-orange); }
+
+.btn {
+  border: none;
+  border-radius: var(--radius);
+  padding: 14px 22px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 120ms var(--ease), background 120ms var(--ease);
+}
+.btn--primary {
+  background: var(--tomato);
+  color: var(--cream);
+}
+.btn--primary:hover { background: var(--tomato-dim); }
+.btn--primary:active { transform: translateY(1px); }
+.btn--outline {
+  background: transparent;
+  color: var(--on-dark);
+  border: 1px solid var(--steel);
+}
+.btn--outline:hover { border-color: var(--char-orange); color: var(--char-orange); }
+.btn:disabled { opacity: 0.55; cursor: progress; }
+
+/* Example chips */
+.chips {
+  margin-top: 26px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+}
+.chips__label {
+  font-family: var(--font-mono);
+  color: var(--on-dark-soft);
+  margin-right: 2px;
+}
+.chip {
+  background: transparent;
+  border: 1px dashed var(--steel);
+  color: var(--on-dark-soft);
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-size: 0.82rem;
+  cursor: pointer;
+  transition: border-color 120ms var(--ease), color 120ms var(--ease);
+}
+.chip:hover { border-color: var(--char-orange); color: var(--char-orange); }
+
+/* Divider — a hairline like the edge of a steel counter */
+.divider {
+  max-width: var(--content-w);
+  margin: 0 auto;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--steel) 15%, var(--steel) 85%, transparent);
+}
+
+/* =========================================================
+   Result — the printed kitchen ticket (signature element)
+   ========================================================= */
+.result {
+  max-width: var(--content-w);
+  margin: 0 auto;
+  padding: 56px 24px;
+  min-height: 120px;
+}
+.result__hint {
+  color: var(--on-dark-soft);
+  font-style: italic;
+}
+.result__error {
+  color: var(--char-orange);
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+}
+
+.ticket {
+  background: var(--cream);
+  color: var(--ink);
+  border-radius: 2px;
+  padding: 36px 36px 28px;
+  position: relative;
+  box-shadow: 0 24px 48px -24px rgba(0,0,0,0.55);
+  animation: print-out 620ms var(--ease) both;
+  transform-origin: top center;
+}
+
+@keyframes print-out {
+  from {
+    clip-path: inset(0 0 100% 0);
+    transform: translateY(-10px);
+  }
+  to {
+    clip-path: inset(0 0 0% 0);
+    transform: translateY(0);
+  }
+}
+
+.ticket__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  border-bottom: 1px dashed var(--ink-soft);
+  padding-bottom: 18px;
+  margin-bottom: 22px;
+}
+.ticket__title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.7rem, 4vw, 2.3rem);
+  text-transform: uppercase;
+  line-height: 1.02;
+}
+.ticket__no {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  white-space: nowrap;
+  padding-top: 4px;
+}
+.ticket__tags {
+  margin-top: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+  text-transform: lowercase;
+}
+
+.ticket__meta {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+  margin-bottom: 22px;
+}
+
+.ticket__section-label {
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.72rem;
+  color: var(--tomato-dim);
+  margin-bottom: 10px;
+}
+
+.ticket__ingredients {
+  list-style: none;
+  margin: 0 0 26px;
+  padding: 0;
+  font-family: var(--font-mono);
+  font-size: 0.92rem;
+}
+.ticket__ingredients li {
+  display: flex;
+  gap: 10px;
+  padding: 4px 0;
+  border-bottom: 1px dotted #D8CFB6;
+}
+.ticket__ingredients li:last-child { border-bottom: none; }
+.ing-qty {
+  flex: 0 0 auto;
+  min-width: 86px;
+  color: var(--ink);
+  font-weight: 700;
+}
+.ing-name { color: var(--ink-soft); }
+
+.ticket__steps {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: step;
+}
+.ticket__steps li {
+  counter-increment: step;
+  position: relative;
+  padding-left: 34px;
+  margin-bottom: 14px;
+  font-size: 0.98rem;
+}
+.ticket__steps li::before {
+  content: counter(step);
+  position: absolute;
+  left: 0; top: 0;
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  background: var(--tomato);
+  color: var(--cream);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* perforated tear edge at the bottom of the ticket */
+.ticket__tear {
+  margin-top: 26px;
+  height: 14px;
+  background-image: radial-gradient(circle, var(--charcoal) 2.2px, transparent 2.3px);
+  background-size: 16px 14px;
+  background-position: 0 center;
+  opacity: 0.9;
+}
+
+/* loading skeleton state */
+.ticket--loading .ticket__title { background: var(--cream-dim); color: transparent; border-radius: 4px; }
+.skeleton-line {
+  height: 14px;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  background: linear-gradient(90deg, var(--cream-dim) 25%, #fff 37%, var(--cream-dim) 63%);
+  background-size: 400% 100%;
+  animation: shimmer 1.3s ease infinite;
+}
+@keyframes shimmer {
+  0% { background-position: 100% 0; }
+  100% { background-position: -100% 0; }
+}
+.ticket__firing {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+  margin-bottom: 16px;
+}
+
+/* =========================================================
+   Sections shared: heading style
+   ========================================================= */
+.section__title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  letter-spacing: 0.01em;
+}
+.section__sub {
+  color: var(--on-dark-soft);
+  font-size: 0.95rem;
+  margin-top: 6px;
+}
+
+/* =========================================================
+   Videos
+   ========================================================= */
+.videos {
+  max-width: var(--content-w);
+  margin: 0 auto;
+  padding: 12px 24px 56px;
+}
+.videos__grid {
+  margin-top: 22px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+.video-card {
+  display: block;
+  text-decoration: none;
+  color: var(--on-dark);
+  background: var(--charcoal-2);
+  border: 1px solid var(--steel);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: border-color 150ms var(--ease), transform 150ms var(--ease);
+}
+.video-card:hover {
+  border-color: var(--char-orange);
+  transform: translateY(-2px);
+}
+.video-card img {
+  width: 100%;
+  display: block;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+.video-card__body { padding: 12px 14px; }
+.video-card__title {
+  font-size: 0.92rem;
+  font-weight: 600;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.video-card__channel {
+  margin-top: 4px;
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  color: var(--on-dark-soft);
+}
+
+/* =========================================================
+   Ask the line cook
+   ========================================================= */
+.ask, .sub {
+  max-width: var(--content-w);
+  margin: 0 auto;
+  padding: 12px 24px 56px;
+}
+.ask__log {
+  margin-top: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.qa {
+  background: var(--charcoal-2);
+  border: 1px solid var(--steel);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+}
+.qa__q {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.qa__q::before {
+  content: "Q ";
+  color: var(--char-orange);
+  font-family: var(--font-mono);
+}
+.qa__a { color: var(--on-dark-soft); }
+.qa__a::before {
+  content: "A ";
+  color: var(--basil);
+  font-family: var(--font-mono);
+}
+.qa--pending .qa__a { font-style: italic; }
+
+.ask__form, .sub__form {
+  display: flex;
+  gap: 10px;
+  margin-top: 18px;
+  flex-wrap: wrap;
+}
+.ask__input, .sub__select {
+  flex: 1 1 260px;
+  background: var(--charcoal-2);
+  border: 1px solid var(--steel);
+  border-radius: var(--radius);
+  color: var(--on-dark);
+  padding: 12px 14px;
+}
+.sub__select { flex: 1 1 220px; }
+.ask__input:focus, .sub__select:focus { border-color: var(--char-orange); }
+
+.sub__result {
+  margin-top: 18px;
+  font-family: var(--font-mono);
+  font-size: 0.92rem;
+  white-space: pre-line;
+  color: var(--on-dark-soft);
+}
+
+/* =========================================================
+   Footer
+   ========================================================= */
+.footer {
+  border-top: 1px solid var(--steel);
+  padding: 28px 24px 48px;
+  text-align: center;
+}
+.footer p {
+  max-width: 50ch;
+  margin: 0 auto;
+  font-size: 0.8rem;
+  color: var(--on-dark-soft);
+}
+
+/* =========================================================
+   Responsive
+   ========================================================= */
+@media (max-width: 640px) {
+  .hero__inner { padding: 48px 18px 36px; }
+  .ticket { padding: 26px 20px 22px; }
+  .videos__grid { grid-template-columns: 1fr; }
+  .rail__inner { padding: 14px 18px; }
+  .ticket__head { flex-direction: column; gap: 6px; }
+}

@@ -1,0 +1,19 @@
+# Equivalent to `pip install -e .` — kept for teams that prefer requirements.txt
+# Search layer — pretrained embedding model (local)
+sentence-transformers>=2.2.0
+rapidfuzz>=3.0.0
+
+# Explanation layer — pretrained local LLM (no hosted API)
+transformers>=4.40.0
+torch>=2.1.0
+sentencepiece>=0.1.99
+
+# Video data source (public search, no user OAuth)
+google-api-python-client>=2.0.0
+
+# Shared
+numpy>=1.24.0
+python-dotenv>=1.0.0
+
+# Only needed for examples/app_layer_example.py
+flask>=3.0.0

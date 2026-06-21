@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>hemu.aidev.Cooking AI — tell the kitchen what you're craving</title>
+  <meta name="description" content="Search any dish, typos welcome, and get the recipe, the method, a video, and a line cook to ask follow-up questions.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍕</text></svg>">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=Albert+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="rail">
+    <div class="rail__inner">
+      <a class="wordmark" href="#top">
+        <span class="wordmark__mark">●</span> hemu.aidev.COOKING&nbsp;AI
+      </a>
+      <p class="rail__tag">a line cook for whatever you're making</p>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <section class="hero">
+      <div class="hero__inner">
+        <p class="eyebrow">order up</p>
+        <h1 class="hero__title">Tell the kitchen<br>what you're craving.</h1>
+        <p class="hero__sub">
+          Search any dish — typos are fine. You'll get the recipe, the method,
+          a video to watch, and a line cook standing by for follow-up questions.
+        </p>
+
+        <form id="searchForm" class="search" autocomplete="off">
+          <label for="searchInput" class="sr-only">Search for a dish</label>
+          <input
+            id="searchInput"
+            class="search__input"
+            type="text"
+            name="q"
+            placeholder="margayta pizza"
+            required
+          >
+          <button type="submit" class="btn btn--primary search__btn">
+            Find recipe
+          </button>
+        </form>
+
+        <div class="chips" aria-label="Try a dish">
+          <span class="chips__label">today's specials —</span>
+          <button class="chip" type="button" data-query="margherita pizza">margherita pizza</button>
+          <button class="chip" type="button" data-query="butter chicken">butter chicken</button>
+          <button class="chip" type="button" data-query="pad thai">pad thai</button>
+          <button class="chip" type="button" data-query="chicken biryani">chicken biryani</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider" role="presentation"></div>
+
+    <section id="resultArea" class="result" aria-live="polite">
+      <p class="result__hint">Nothing fired yet — search a dish above to get started.</p>
+    </section>
+
+    <section id="videoSection" class="videos" hidden>
+      <h2 class="section__title">Watch it made</h2>
+      <div id="videoGrid" class="videos__grid"></div>
+    </section>
+
+    <section id="askSection" class="ask" hidden>
+      <h2 class="section__title">Ask the line cook</h2>
+      <p class="section__sub">Questions about <span id="askRecipeName">this dish</span> — substitutions, timing, technique.</p>
+
+      <div id="askLog" class="ask__log" aria-live="polite"></div>
+
+      <form id="askForm" class="ask__form">
+        <label for="askInput" class="sr-only">Ask a question about this recipe</label>
+        <input
+          id="askInput"
+          class="ask__input"
+          type="text"
+          placeholder="No pizza stone — what do I do?"
+          required
+        >
+        <button type="submit" class="btn btn--outline" id="askBtn">Ask</button>
+      </form>
+    </section>
+
+    <section id="subSection" class="sub" hidden>
+      <h2 class="section__title">Need a swap?</h2>
+      <p class="section__sub">Out of an ingredient? Get a real substitute, not a guess.</p>
+
+      <form id="subForm" class="sub__form">
+        <label for="subSelect" class="sr-only">Choose an ingredient to substitute</label>
+        <select id="subSelect" class="sub__select"></select>
+        <button type="submit" class="btn btn--outline" id="subBtn">Get swap</button>
+      </form>
+
+      <div id="subResult" class="sub__result" aria-live="polite"></div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>Recipes matched by a local embedding model. Answers from a local language model. No order ever leaves your kitchen.</p>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
